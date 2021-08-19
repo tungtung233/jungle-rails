@@ -2,19 +2,7 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
-    # puts @order.id
     @line_items = LineItem.where(order_id: @order.id)
-    # puts @line_items[0].product_id
-    @order_details = Product
-      .joins("JOIN line_items ON line_items.product_id = products.id")
-      .where(id: 
-        (
-          @line_items.each do |item| 
-            item.product_id 
-          end
-        ))
-
-    puts @order_details[0]
   end
 
   def create

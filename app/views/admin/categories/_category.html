@@ -1,0 +1,14 @@
+<tr>
+  <td>
+    <%= category.name %>
+  </td>
+  <td>
+    <%= category.products.count %>
+  </td>
+  <td>
+    <%= category.created_at.strftime("%B %d, %Y, %l:%M%P") %>
+  </td>
+  <td>
+    <%= category.updated_at.strftime("%B %d, %Y, %l:%M%P") %>
+  </td>
+</tr>
